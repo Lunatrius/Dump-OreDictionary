@@ -61,7 +61,7 @@ public class DumpOreDictionary {
             writeToFile(fileJson, dictionaryJson);
             writeToFile(fileCsv, dictionaryCSV);
         } catch (final IOException e) {
-            e.printStackTrace();
+            Reference.logger.error("Failed to write to files!", e);
         }
     }
 
