@@ -3,18 +3,18 @@ package com.github.lunatrius.dod;
 import com.github.lunatrius.dod.reference.Reference;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.network.NetworkCheckHandler;
+import cpw.mods.fml.common.registry.FMLControlledNamespacedRegistry;
+import cpw.mods.fml.common.registry.GameData;
+import cpw.mods.fml.relauncher.Side;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.FMLCommonHandler;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.network.NetworkCheckHandler;
-import net.minecraftforge.fml.common.registry.FMLControlledNamespacedRegistry;
-import net.minecraftforge.fml.common.registry.GameData;
-import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.oredict.OreDictionary;
 
 import java.io.BufferedWriter;
@@ -90,7 +90,7 @@ public class DumpOreDictionary {
 
     private String getName(final Item item) {
         if (item instanceof ItemBlock) {
-            return String.valueOf(BLOCK_REGISTRY.getNameForObject(((ItemBlock) item).block));
+            return String.valueOf(BLOCK_REGISTRY.getNameForObject(((ItemBlock) item).field_150939_a));
         }
 
         return String.valueOf(ITEM_REGISTRY.getNameForObject(item));
