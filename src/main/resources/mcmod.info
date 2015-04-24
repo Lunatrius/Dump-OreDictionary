@@ -1,0 +1,25 @@
+{
+	"modListVersion": 2,
+	"modList": [
+		{
+			"modid": "DumpOreDictionary",
+			"name": "Dump OreDictionary",
+			"description": "Dumps the entire OreDictionary into a CSV and JSON file.",
+			"mcversion": "${mcversion}",
+			"version": "${version}",
+			"authorList": [
+				"Lunatrius"
+			],
+			"credits": "",
+			"dependants": [  ],
+			"dependencies": [ "Forge@[${minforgeversion},)" ],
+			"parent": "",
+			"requiredMods": [ "Forge@[${minforgeversion},)" ],
+			"logoFile": "",
+			"screenshots": [  ],
+			"updateUrl": "http://mc.lunatri.us/",
+			"url": "http://mc.lunatri.us/",
+			"useDependencyInformation": true
+		}
+	]
+}
