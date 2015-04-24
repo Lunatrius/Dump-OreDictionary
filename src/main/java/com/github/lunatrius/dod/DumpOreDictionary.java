@@ -77,7 +77,7 @@ public class DumpOreDictionary {
             for (final ItemStack itemStack : OreDictionary.getOres(name)) {
                 final String stackName = getName(itemStack.getItem());
                 final int meta = itemStack.getItemDamage();
-                final String displayName = itemStack.getItem().getItemStackDisplayName(itemStack);
+                final String displayName = meta != OreDictionary.WILDCARD_VALUE ? itemStack.getItem().getItemStackDisplayName(itemStack) : "*";
                 final OreEntry entry = new OreEntry(stackName, meta, displayName);
                 list.add(entry);
             }
